@@ -1,3 +1,3 @@
-CSD 360 Web Development with JavaScript
-Contributor
-Brittany Kyncl
+#CSD 360 Web Development with JavaScript
+##Contributor
+##Brittany Kyncl
