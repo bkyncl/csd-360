@@ -1,0 +1,110 @@
+<!--
+mod_5  .html
+Module 5 Assignment 
+Name: Brittany Kyncl
+Date: 4.4.23
+Course: CSD360
+Dice simulation with interactive Randomized double dice roll function utilizing JS switch statement to display the various results
+Such as:
+ "Snake Eyes"; /* 2 */
+ "Box Cars"; /* 12 */
+ "You Win"; /* 7 or 11 */
+ "total"; /* All remaining values */
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 5 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 5 Assignment</title>
+</head>
+<body>
+    <header id="top">
+        <h1>CSD 360 - JS Switch Statement Dice Roll</h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="../mod-4/mod_4.html">Previous</a>
+        <a href="../mod-6/mod_6.html">Next</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-title">Mod 5 Assignment</div>
+            <div class="card-content">
+                <p>This assignment utilizes a form that includes two dice and a button to roll them. When the roll dice 
+                    button is clicked, the JavaScript code generates two random numbers (1-6) and adds them together for the total.
+                    A swith statement is utilized to output specific text based on the total value of the dice roll and to transorm the dice 
+                    to a specific face based on the roll values. 
+                </p>
+                <br>
+                <p>Results such as:</p>
+                <ol>
+                    <li>"Snake Eyes" = Total of 2</li>
+                    <li>"You Win!" = Total of 7 or 11</li>
+                    <li>"Box Cars" = Total of 12</li>
+                    <li>"(total)" = Default case to output total</li>
+                </ol>
+                <br>
+            </div> 
+        </div>
+        <div class="card">
+            <div class="card-title">Dice Roll Simulation</div>
+            <div class="card-content">
+                <div class="dice-container">
+                    <div class="dice">
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face right"></div>
+                        <div class="face left"></div>
+                    </div>
+                    <div class="dice">
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face right"></div>
+                        <div class="face left"></div>
+                    </div>
+                </div>
+                <form name="diceForm">
+                    <table id="roller">
+                        <tr>
+                            <th>Dice 1</th>
+                            <th>Dice 2</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="dice1"></td>
+                            <td><input type="text" name="dice2"></td>
+                            
+                        </tr>
+                        <tr>
+                            <th id="total">Total</th>
+                            <td><input type="text" name="total"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" class="button" name="button1" onclick="diceRoll()" value="Roll Dice">
+                                <input type="button" class="button" name="button2" value="Reset" onclick="reset()">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div> 
+        </div>
+    </div>
+    <footer>
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+    <script src="script.js"> </script>
+</body>
+</html>

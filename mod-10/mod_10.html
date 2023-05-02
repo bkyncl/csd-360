@@ -1,0 +1,112 @@
+<!--
+mod_10.html
+Module 9 Assignment 
+Name: Brittany Kyncl
+Date: 5.2.23
+Course: CSD360
+OVERVIEW
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 9 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 10 Assignment</title>
+</head>
+<body>
+    <header id="top">
+        <h1>CSD 360 - JS </h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="../mod-9/mod_9.html">Previous</a>
+        <a href="#">Next</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-title">Mod 10 Assignment</div>
+            <div class="card-content">
+                <p>This assignment uses a function that counts the number of negative, zero, and positive numbers in a generated array. 
+                    The user is allowed to either input their own array or to user a randomly generated array. The script starts by initializing 
+                    several variables including two empty arrays, userNumbersArray and randomArray, and several elements from the HTML DOM using 
+                    document.getElementById(). It also sets the variable randSelection to false which serves as a flag that is set to true when the 
+                    user chooses to use a randomly generated array.
+                </p>
+                <br>
+                <p>
+                    The displayArray() function takes an array as a parameter and displays its contents in the arrayDiv element. The addUserNumbers()
+                    function takes in user input numbers from the numbers input field, checks if they are valid integers, and pushes them into the 
+                    userNumbersArray. It then calls the displayArray() function to display the generated array to the user.
+                </p>
+                <br>
+                <p>
+                    The getRandomArray() function generates a random array of numbers and displays it to the user using the same displayArray() function.
+                    The counterResultFromDiv() function calls the counter() function dependent on the type of array the user is working with.
+                    The counter() function takes an array as a parameter and uses counter variables and a for loop to count keep track of
+                    the specific number occurances to be returned. The counter() function also makes use of a key value pair collection where 
+                    each key will corresponding to the counter variable it describes. The results of the counter function are then displayed in 
+                    the results element.
+                </p>
+            </div> 
+        </div>
+        <div class="card">
+            <div class="card-title">Array Counter</div>
+            <div id="lists" class="card-content">
+                <form name="arrayForm">
+                    <table class="userForm">
+                        <tbody>
+                            <tr>
+                                <th colspan="3">Enter Numbers to Generate Your Own Array</th>
+                            </tr>
+                            <tr>
+                                <th class="fixedHeader">Enter numbers:</th>
+                                <td>
+                                    <input class="userinput" type="text" id="numbers" placeholder="Enter numbers separated by a comma, or one at a time.">
+                                </td>
+                                <td id="addContainer">
+                                    <button type="button" id="add" class="button" onclick="addUserNumbers()">Add to Array</button>
+                                </td>
+                              </tr>
+                            <tr>
+                                <th class="fixedHeader">
+                                <label>Your array:</label>
+                                </th>
+                                <td colspan="2">
+                                <div id="array"> </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <button type="button" id="clear" class="button" onclick="clearContainer()">Clear Your Array</button>
+                                    <button type="button" id="gen" class="button" onclick="getRandomArray(40)">Generate Random Array</button>
+                                    <button type="button" id="submit" class="button" onclick="counterResultFromDiv()">Submit Your Array</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="fixedHeader">
+                                    <label>Results:</label>
+                                </th>
+                                <td colspan="3">
+                                    <div id="results"> </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>

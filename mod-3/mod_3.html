@@ -1,0 +1,109 @@
+<!--
+index.html
+Module 3 Assignment 
+Name: Brittany Kyncl
+Date: 3.22.23
+Course: CSD360
+Using innerHTML to change the content of an element based on a button click
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 3 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 3 Assignment</title>
+</head>
+<body>
+    <header>
+        <h1>CSD 360 - Filling in the Blanks Using JS innerHTML</h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="#">Previous</a>
+        <a href="../mod-4/mod_4.html">Next</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-title">Short Story - Fill in the Blanks</div>
+            <br>
+            <div class="card-content">
+                <p>
+                    I had always been fascinated by the night sky, but I never really understood what the positions of the stars and planets meant.
+                    Until one day, when I was young, I learned about the positions of the stars and planets in the sky, and how they could be useful for navigation and tracking time. 
+                    I learned how to find the <span id="one">_________________________</span>, which is always in the same position in the sky and can be used to find direction if I ever am lost. 
+                    I also learned how the positions of the planets could be used to predict future astronomical events, like <span id="two">_________________________</span>.  
+                </p>
+                <br>
+                <p>
+                    Then in school I learned how to look through a telescope.  Later, when I peered through the eyepiece I was amazed by what I saw. The moon looked like it was right in front of me, 
+                    and I could see craters and mountains on its surface. I learned that these craters and mountains were formed through a combination of <span id="three">_________________________</span>.
+                    I saw Jupiter and its four largest moons, and Saturn with its beautiful rings. I realized that the positions of the stars and planets in the sky were not just beautiful to look at, but also had practical 
+                    applications. Because by studying the positions and movements of planets in our solar system, we can understand the overall motion of the solar system through the galaxy. Which provides insight on 
+                    how our solar system formed and allows us <span  id="four">_________________________</span>. 
+                </p>
+                <br>
+            </div> 
+        </div>
+        <div class="card">
+            <div class="card-title">Press these buttons to fill in the blanks:</div>
+            <br>
+            <div class="card-content">
+                <button type = "button" class="button" onclick = "fifthFunction('one')">First Blank</button><br>
+                <br>
+                <button type = "button" class="button" onclick = "fifthFunction('two')">Second Blank</button><br>
+                <br>
+                <button type = "button" class="button" onclick = "fifthFunction('three')">Third Blank</button><br>
+                <br>
+                <button type = "button" class="button" onclick = "fifthFunction('four')">Fourth Blank</button><br>
+                <br>
+                <button type = "button" class="button" onclick = "fifthFunction('all')">Reset Blanks</button><br>
+            </div> 
+        </div>
+    </div>
+    <script>
+        // Script Using innerHTML to change the content of an element based on a button click
+        // Define four sentences to replace blank spaces and replacement blank space for reset
+        var sentenceOne = "North Star";
+        var sentenceTwo = "eclipses and meteor showers";
+        var sentenceThree = "meteorite impacts and previous volcanic activity";
+        var sentenceFour = "to make predictions on how it may evolve in the future";
+        var blanks = "_________________________";
+
+        // Define var to hold returned NodeList of all selected HTML elements with IDs 'one', 'two', 'three', and 'four' 
+        const allBlanks = document.querySelectorAll('#one, #two , #three, #four');
+
+        // Function which takes a button parameter and updates the HTML content of the corresponding element based on the passed ID.
+        function fifthFunction(button) {
+            switch(button) {
+                case "one":
+                    document.getElementById('one').innerHTML = sentenceOne;
+                    break;
+                case "two":
+                    document.getElementById('two').innerHTML = sentenceTwo;
+                    break;
+                case "three":
+                    document.getElementById('three').innerHTML = sentenceThree;
+                    break;
+                case "four":
+                    document.getElementById('four').innerHTML = sentenceFour;
+                    break;
+                // Case which loops through allBlanks NodeList to replace all selected element content with the 'blanks' variable.
+                case "all": 
+                    allBlanks.forEach(element => element.innerHTML = blanks);
+                    break;  
+            }
+        }
+    </script>
+    <footer>
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+</body>
+</html>

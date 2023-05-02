@@ -1,0 +1,38 @@
+/*
+style.CSS
+Module 3 Assignment 
+Name: Brittany Kyncl
+Date: 3.22.23
+Course: CSD360
+*/
+
+h1 {
+    text-align: center;
+}
+p {
+    font-weight: 300;
+    font-size: 20px;
+}
+#one, #two, #three, #four {
+    font-style: italic;
+}
+.card {
+    width: 60%;
+    padding: 2%;
+}
+.card:nth-child(2) {
+    justify-content: center;
+    text-align: center;
+    width:30%;
+}
+@media (max-width: 968px) {
+    .card, .card:nth-child(2) {
+        width: auto;
+    }
+}
+button {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    width: 120px;
+}

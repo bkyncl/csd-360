@@ -1,0 +1,35 @@
+/*
+landing.CSS
+Landing Page Assignment 
+Name: Brittany Kyncl
+Date: 3.22.23
+Course: CSD360
+*/
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%; 
+}
+h1,h2,h3,h4 {
+    background-color: #116855;
+    border: 2px solid #000000;
+    color: #fff;
+    padding: 10px;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+a:link{
+    color: #000000;
+}
+a:visited {
+    color: #000000;
+}
+a:hover {
+    background-color: #f3e741;
+    color: #000000;
+}

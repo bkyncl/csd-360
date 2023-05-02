@@ -1,0 +1,43 @@
+/*
+style.css
+Module 4 Assignment 
+Name: Brittany Kyncl
+Date: 3.30.23
+Course: CSD360
+*/
+
+.card {
+    width: 45%;
+}
+#solutions {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.card ol {
+    list-style: none;
+}
+#solutions ul {
+    list-style: none;
+}
+#solutions th {
+    background-color: #116855;
+    color:#fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+#solutions th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    word-wrap: break-word;
+}
+@media (max-width: 767px) {
+    #solutions {
+        table-layout: fixed;
+    }
+    #solutions th, td {
+        width: 50%;
+        font-size: 15px;
+    }
+}

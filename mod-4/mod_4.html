@@ -1,0 +1,143 @@
+<!--
+mod_4.html
+Module 4 Assignment 
+Name: Brittany Kyncl
+Date: 3.30.23
+Course: CSD360
+Starting with the following JavaScript:
+    var i = 842;
+    document.write(i + i % 3 / 7 - 2 + 7 ** 3);
+Using parentheses to modify the output line to alter the result of 1183.2857142857142 to the following list of outputs.
+    341.14285714285717
+    1185.4
+    842.0011574074074
+    113.28571428571433
+    343.2
+    841.75 
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 4 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 4 Assignment</title>
+</head>
+<body>
+    <header id="top">
+        <h1>CSD 360 - JS Calculation</h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="../mod-3/mod_3.html">Previous</a>
+        <a href="../mod-5/mod_5.html">Next</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-title">Mod 4 Assignment</div>
+            <div class="card-content">
+                <p>Starting with the following JavaScript:</p>
+                <ol>
+                    <li>var i = 842;</li>
+                    <li>document.write(i + i % 3 / 7 - 2 + 7 ** 3);</li>
+                </ol>
+                <p>Using parentheses to modify the output line to alter the result of 1183.2857142857142 to the following list of outputs.</p>
+                <ul>
+                    <li>341.14285714285717</li>
+                    <li>1185.4</li>
+                    <li>842.0011574074074</li>
+                    <li>113.28571428571433</li>
+                    <li>343.2</li>
+                    <li>841.75 </li>
+                </ul>
+                <br>
+            </div> 
+        </div>
+        <div class="card">
+            <div class="card-title">Solutions</div>
+            <div class="card-content">
+                <table id="solutions">
+                    <tr>
+                        <th>Expected Output</th>
+                        <th>Expression</th>
+                    </tr>
+                    <tr>
+                        <td>1183.2857142857142</td>
+                        <td>
+                            <ul>
+                                <li>(i + i % 3 / 7 - 2 + 7 ** 3)</li>
+                                <li id="1">=</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>341.14285714285717</td>
+                        <td>
+                            <ul>
+                                <li>((i + i) % 3 / 7 - 2 + 7 ** 3)</li>
+                                <li id="2"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1185.4</td>
+                        <td>
+                            <ul>
+                                <li>(i + i % 3 / (7 - 2) + 7 ** 3)</li>
+                                <li id="3"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>842.0011574074074</td>
+                        <td>
+                            <ul>
+                                <li>(i + i % 3 / (7 - 2 + 7) ** 3)</li>
+                                <li id="4"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>113.28571428571433</td>
+                        <td>
+                            <ul>
+                                <li>(i + i % 3 / 7 - (2 + 7) ** 3)</li>
+                                <li id="5"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>343.2</td>
+                        <td>
+                            <ul>
+                                <li>((i + i) % 3 / (7 - 2) + 7 ** 3)</li>
+                                <li id="6"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>841.75</td>
+                        <td>
+                            <ul>
+                                <li>(i + i % 3 / (7 - (2 + 7)) ** 3)</li>
+                                <li id="7"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+    <footer>
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+    <script src="script.js"> </script>
+</body>
+</html>

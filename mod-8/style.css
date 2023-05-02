@@ -1,0 +1,83 @@
+/*
+style.css
+Module 8 Assignment 
+Name: Brittany Kyncl
+Date: 4.22.23
+Course: CSD360
+*/
+.card {
+    width: 30%;
+}
+.card:nth-child(2) {
+    justify-content: center;
+    text-align: center;
+    width:60%;
+}
+.card:nth-child(3) {
+    justify-content: center;
+    text-align: center;
+    width:94%;
+    overflow: auto;
+}
+#table-card, #table-card2 {
+    margin-right: 3%;
+}
+.values-table {
+    width: 100%;
+    margin-bottom: 30px;
+    margin: 2%;
+}
+.values-table th {
+    background-color: #116855;
+    color:#fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+.values-table th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 10px;
+}
+#input-table {
+    width: 40%;
+    margin: 0 auto;
+}
+#input-table th, td {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.fields {
+    margin-right: 3%;
+}
+.generate {
+    color: #fff;;
+    background: #252525;
+    font-size: 15px;
+    font-weight: 500;
+    border: 2px solid #000000;
+    border-radius: 3px;
+}
+.generate:hover{
+    border: 2px solid #252525;
+    background: #000000;
+
+}
+input[type="number"] {
+    width: 15%;
+}
+@media (max-width: 767px) {
+    #input-table {
+        width: 100%;
+        margin-left: 2%;
+    }
+}
+@media (max-width: 968px) {
+    .card, .card:nth-child(2), .card:nth-child(3) {
+        width: 100%;
+    }
+}
+.small-font td, .small-font th {
+    font-size: 12px;
+    padding: 0;
+}

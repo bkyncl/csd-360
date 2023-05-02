@@ -1,0 +1,19 @@
+/*
+style.css
+Module 6 Assignment 
+Name: Brittany Kyncl
+Date: 4.16.23
+Course: CSD360
+*/
+.card {
+    width: 45%;
+}
+h2 {
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 2%;
+}
+.button {
+    width: 150px;
+    margin: 20px calc(50% - 75px) 20px calc(50% - 75px);
+}

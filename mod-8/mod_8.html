@@ -1,0 +1,115 @@
+<!--
+mod_8.html
+Module 8 Assignment 
+Name: Brittany Kyncl
+Date: 4.22.23
+Course: CSD360
+Page which displays table containing values 4 - 14 displaying their
+Initial value.
+Square root (with only two digits to the right of the decimal point).
+The base multiplied to the power of 2.
+The base multiplied to the power of 3
+Tables values generated using loop iteration includes using methods such as sqrt() and pow()
+Page also display multiplication table based on user input displaying the products of numbers
+within the input range
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 8 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 8 Assignment</title>
+</head>
+<body>
+    <header id="top">
+        <h1>CSD 360 - JS Functions</h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="../mod-7/mod_7.html">Previous</a>
+        <a href="../mod-9/mod_9.html">Next</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-title">Mod 8 Assignment</div>
+            <div class="card-content">
+                <p>This assignment utilizes JavaScript functions to generate table data for display. Two functions are used
+                    to display the data. The first displays the square root, square, and cube of numbers 4 - 14. The second
+                    generates a multiplication table based on user input, displaying the products of the numbers within
+                    the input range. The first function used loop iteration to calculate the square root, square, and cube of 
+                    the numbers. Then the values are appended to the current row of the table. Then the function returns the 
+                    completed rows which is appended to the table body using innerHTML. The second function prompts the user
+                    to enter in a range of numbers to be multiplied in the table. The function uses loop iteration to
+                    generate the multiplication table, starting with the row and column headers. The results of each row and column
+                    is then calculated and added to the corresponding cell. The completed table rows are then appended
+                    to the table body using innterHTML.    
+                </p>
+                <br>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Math Functions</div>
+            <div id="table-card" class="card-content">
+                <table class="values-table">
+                    <thead>
+                        <tr>
+                            <th>Initial Value</th>
+                            <th>Square Root</th>
+                            <th>Power of 2</th>
+                            <th>Power of 3</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- values to be appended here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Multiplication Table</div>
+            <div id="table-card2" class="card-content">
+                <table id="input-table" class="values-table">
+                    <tr>
+                        <th>Enter Number Range to Generate a Multiplication Table</th>
+                    </tr>  
+                    <tr>
+                        <th>
+                            <label>Number 1:</label>
+                            <input class="fields" type="number" id="number1">
+                            <label>Number 2:</label>
+                            <input class="fields" type="number" id="number2">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input class="generate" type="button" value="Generate" onclick="multiplicationTable()">
+                        </th>
+                    </tr>
+                </table>
+                <table class="values-table">
+                    <thead>
+                        <tr>
+                            <th class="multiply-header" colspan="1">Multiplication Table</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body2">
+                        <!-- values to be appended here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>

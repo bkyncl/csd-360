@@ -1,0 +1,84 @@
+<!--
+mod_6.html
+Module 6 Assignment 
+Name: Brittany Kyncl
+Date: 4.16.23
+Course: CSD360
+Page displays first 30 Fibonacci numbers using JS methods to calculate each number in the sequence.
+There are three different methods used to generate the Fibonacci number, recursive/forloop/whileloop
+then a forloop is used to display the entire sequence where each iteration calls the specified method 
+to generate the Fibonacci number for each desired index up to desired termination index.
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 6 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 6 Assignment</title>
+</head>
+<body>
+    <header id="top">
+        <h1>CSD 360 - JS Fibonacci Sequence</h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="../mod-5/mod_5.html">Previous</a>
+        <a href="../mod-7/mod_7.html">Next</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-title">Mod 6 Assignment</div>
+            <div class="card-content">
+                <p>This assignment utilizes JavaScript functions to display the first 30 numbers in the Fibonacci sequence, leaving off 0 and starting with 1.
+                    The Fibonacci sequence is a series of numbers where each number is the sum of the two preceeding numbers. Here are three approaches that 
+                    can be used to calculate the the Fibonacci sequence numbers such as using a recursive function, a forloop function, or a whileloop function.
+                    Each method uses a different implementation of the Fibonacci algorithm to calculate the numbers but still produces same result. Additonally,
+                    another forloop function is used to display the entire Fibonacci sequence up to 30. Where each iteration calls one of the previously
+                     specified methods passing in the current iteration index as a paremeter to return the calculated Fibonacci number for the index.
+                </p>
+                <br>
+                <h2>Recursive Fibonacci Function</h2>
+                    <p>This function generates the Fibonacci sequence using recursion. It takes an index as input and returns the Fibonacci number 
+                        at that index. If the index is less than 2, it simply returns the index itself. Otherwise, it calls itself recursively with 
+                        the previous two indices and returns the sum of those two calls. In terms of efficiency, this recursive function is less efficient
+                        than using an iterative approach such as a forloop or whileloop. Because there is increased overhead with multiple function calls
+                        in terms of memory allocation and execution time. As the input size increases, the number of function calls increases exponentially.
+                    </p>
+                <button class="button" onclick="displayFibonacci(recursionFibonacci, 'Recursive Function Results')">Reveal Results</button>
+                <h2>Forloop Fibonacci Function</h2>
+                    <p>This function generates the Fibonacci sequence using a for loop. It takes an index as input and returns the Fibonacci number at 
+                        that index. If the index is 1 or 2, it simply returns 1. Otherwise, it initializes two variables to 1 and uses a for loop to 
+                        calculate the Fibonacci number at the given index by repeatedly adding the previous two numbers in the sequence. In terms of efficiency, 
+                        this method is more efficient than a recursive method as it avoids the overhead of function calls. It is also slightly less verbose than 
+                        using a whileloop method.
+                    </p>
+                <button class="button" onclick="displayFibonacci(forloopFibonacci, 'Forloop Funtion Results')">Reveal Results</button>
+                <h2>Whileloop Fibonacci Function</h2>
+                    <p>This function generates the Fibonacci sequence using a while loop. It takes an index as input and returns the Fibonacci number at 
+                        that index. If the index is 1 or 2, it simply returns 1. Otherwise, it initializes two variables to 1 and uses a while loop to 
+                        calculate the Fibonacci number at the given index by repeatedly adding the previous two numbers in the sequence. In terms of efficiency, 
+                        this method is more efficient than a recursive method. Although it can be slightly more verbose than using a forloop method.
+                    </p>
+                <button class="button" onclick="displayFibonacci(whileloopFibonacci, 'Whileloop Funtion Results')">Reveal Results</button>
+                <br>
+            </div> 
+        </div>
+        <div class="card">
+            <div class="card-title" id="method-name">Method Results...</div>
+            <div class="card-content" id="result-container"></div>
+        </div>
+    </div>
+    <footer>
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>
