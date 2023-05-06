@@ -2,11 +2,10 @@
 style.css
 Module 10 Assignment 
 Name: Brittany Kyncl
-Date: 5.2.23
+Date: 5.6.23
 Course: CSD360
+styling for mod_10.html
 */
-
-
 h2 {
     color: #fff;
     text-shadow:
@@ -30,7 +29,7 @@ h2 {
 }
 .game-container{
     position: relative;
-    height: 100vh;
+    height: 90vh;
     background: #181717;
 }
 .para-container img {
@@ -39,7 +38,7 @@ h2 {
 }
 .select-box, .playboard, .results {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
