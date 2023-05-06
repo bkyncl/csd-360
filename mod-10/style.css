@@ -5,3 +5,217 @@ Name: Brittany Kyncl
 Date: 5.2.23
 Course: CSD360
 */
+
+
+h2 {
+    color: #fff;
+    text-shadow:
+    -2px -2px 10px #181818,  
+    2px -2px 10px #181818,
+    -2px 2px 10px #181818,
+    2px 2px 10px #181818;
+    font-size: 800%;
+    font-weight: 400;
+    z-index: 1;
+}
+.para-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse 50% 50% at center, #2b2a2a, #181717);
+}
+.game-container{
+    position: relative;
+    height: 100vh;
+    background: #181717;
+}
+.para-container img {
+    position: absolute;
+    width: 65%;
+}
+.select-box, .playboard, .results {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.select-box {
+    background-color: #fff;
+    padding: 40px 40px 40px 40px;
+    border-radius: 5px;
+    width: 40%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    transition: all 0.3s ease;
+}
+.select-box.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px; /* add */
+}
+.options button {
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    background: #23cc1d;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.options button:hover,
+.results button:hover {
+    transform: scale(0.9);
+}
+.playerX {
+    margin-right: 25px;
+}
+.selection {
+    font-size: 40px;
+    padding: 30px;
+}
+.title{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #9b9797;
+}
+.playboard {
+    margin-top: 100px;
+    text-align: center;
+    width: 30%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.playboard.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.5s ease;
+}
+.details {
+    font-size: 40px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.playboard section {
+    display: flex;
+}
+.playboard section span {
+    display: block;
+    margin: 5px;
+    height: 180px;
+    width: 180px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 90px;
+    text-align: center;
+    line-height: 180px;
+}
+.playboard .details .players{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    color:#23cc1d;
+}
+.details .slider {
+    position: absolute;
+    background: #23cc1d;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    z-index: 2;
+    transition: all .5s ease;
+}
+.players.active span:first-child {
+    color:#23cc1d;
+}
+.players.active span:nth-child(2) {
+    color:#fff;
+}
+.players.active .slider {
+    left: 50%;
+}
+.playboard .details span {
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    position: relative;
+    z-index: 5;
+    transition: all .5s ease;
+}
+.details span:first-child{
+    color: #fff;
+}
+.results {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.results.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.5s ease;
+}
+.results .win-text {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+
+}
+.results .win-text p {
+    margin: 0 20px;
+}
+.results button {
+    width: 30%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.results .btn {
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    background: #23cc1d;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.x {
+    color:#23cc1d;
+}
+.o {
+    color:#181717;
+}
