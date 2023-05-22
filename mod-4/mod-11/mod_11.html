@@ -1,0 +1,103 @@
+<!--
+mod_11.html
+Module 11 Assignment 
+Name: Brittany Kyncl
+Date: 5.11.23
+Course: CSD360
+This program enables interactive image filtering and preview functionality on a webpage.
+Users can click on filter items to display specific images based on categories.
+The selected image can be previewed in a larger size with its category name.
+The code utilizes event listeners, DOM manipulation, and CSS classes to achieve the desired functionality.
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 11 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 11 Assignment</title>
+</head>
+<body>
+    <header id="top">
+        <h1>CSD 360 - JS Responsive Gallery Filter</h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="../mod-10/mod_10.html">Previous</a>
+        <a href="../mod-3/mod_3.html">Next</a>
+    </div>
+    <div class="wrapper">
+        <div class="filter">
+            <div class="items">
+                <span class="item active" data-name="all">All</span>
+                <span class="item" data-name="womens">Womens</span>
+                <span class="item" data-name="mens">Mens</span>
+                <span class="item" data-name="jeans">Jeans</span>
+                <span class="item" data-name="shoes">Shoes</span>
+                <span class="item" data-name="sunglasses">Sunglasses</span>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="image" data-name="shoes"><span><img src="img/neonshoe_1.WebP" alt="Nike Air Classic Edititon"></span></div>
+            <div class="image" data-name="womens"><span><img src="img/womenblack_1.WebP" alt="Black Looks"></span></div>
+            <div class="image" data-name="shoes"><span><img src="img/colorshoe_2.WebP" alt="Color Block Air Force"></span></div>
+            <div class="image" data-name="womens jeans"><span><img src="img/jeans_1.WebP" alt="Distressed Jeans"></span></div>
+            <div class="image" data-name="womens"><span><img src="img/womenblack_2.WebP" alt="Black Looks"></span></div>
+            <div class="image" data-name="womens shoes"><span><img src="img/colorshoe_1.WebP" alt="Color Block Air Force"></span></div>
+            <div class="image" data-name="womens jeans"><span><img src="img/jeans_2.WebP" alt="Distressed Jeans"></span></div>
+            <div class="image" data-name="womens"><span><img src="img/womenblack_3.WebP" alt="Black Looks"></span></div>
+            <div class="image" data-name="mens sunglasses"><span><img src="img/mensunglasses_2.WebP" alt="Mens Sunglasses"></span></div>
+            <div class="image" data-name="shoes"><span><img src="img/colorshoe_3.WebP" alt="Color Block Air Force" ></span></div>
+            <div class="image" data-name="womens jeans"><span><img src="img/jeans_3.WebP" alt="Distressed Jeans" ></span></div>
+            <div class="image" data-name="womens sunglasses"><span><img src="img/womensunglasses_1.WebP" alt="Womens Sunglasses" ></span></div>
+            <div class="image" data-name="mens"><span><img src="img/malelook_2.WebP" alt="Distressed Mens Fashion" ></span></div>
+            <div class="image" data-name="mens sunglasses"><span><img src="img/mensunglasses_1.WebP" alt="Mens Sunglasses" ></span></div>
+            <div class="image" data-name="womens"><span><img src="img/womenblack_4.WebP" alt="Black Looks" ></span></div>
+            <div class="image" data-name="mens jeans sunglasses"><span><img src="img/malelook_3.WebP" alt="Distressed Mens Fashion" ></span></div>
+            <div class="image" data-name="shoes womens"><span><img src="img/neonshoe_4.WebP" alt="Nike Air Classic Edititon" ></span></div>
+            <div class="image" data-name="mens sunglasses"><span><img src="img/mensunglasses_3.WebP" alt="Mens Sunglasses" ></span></div>
+            <div class="image" data-name="womens sunglasses"><span><img src="img/womensunglasses_2.WebP" alt="Womens Sunglasses" ></span></div>
+            <div class="image" data-name="womens sunglasses"><span><img src="img/womensunglasses_3.WebP" alt="Womens Sunglasses" ></span></div>
+            <div class="image" data-name="shoes"><span><img src="img/colorshoe_4.WebP" alt="Color Block Air Force" ></span></div>
+            <div class="image" data-name="mens sunglasses"><span><img src="img/mensunglasses_4.WebP" alt="Mens Sunglasses" ></span></div>
+            <div class="image" data-name="mens sunglasses"><span><img src="img/malelook_1.WebP" alt="Distressed Mens Fashion" ></span></div>
+            <div class="image" data-name="shoes"><span><img src="img/neonshoe_2.WebP" alt="Nike Air Classic Edititon" ></span></div>
+            <div class="image" data-name="womens jeans"><span><img src="img/jeans_4.WebP" alt="Distressed Jeans" ></span></div>
+            <div class="image" data-name="mens jeans"><span><img src="img/malelook_4.WebP" alt="Distressed Mens Fashion" ></span></div>
+            <div class="image" data-name="shoes"><span><img src="img/neonshoe_3.WebP" alt="Nike Air Classic Edititon"></span></div>
+            <div class="image" data-name="womens sunglasses"><span><img src="img/womensunglasses_4.WebP" alt="Womens Sunglasses" ></span></div>
+        </div>
+    </div>   
+    <div class="preview">
+        <div class="details">
+            <div class="title">Image Category: <div class="info"></div></div>
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </span>
+        </div>
+        <div class="image-box">
+            <div class="small">
+                <img class="small-image" src="#" alt="image">
+                <img class="small-image" src="#" alt="image">
+                <img class="small-image" src="#" alt="image">
+                <img class="small-image" src="#" alt="image">
+            </div>
+            <img class="preview-img" src="#" alt="image">
+        </div> 
+    </div>  
+    <div class="shadow"></div>
+    <footer id="footer">
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>

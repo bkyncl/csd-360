@@ -1,0 +1,419 @@
+/*
+style.css
+Module 10 Assignment 
+Name: Brittany Kyncl
+Date: 5.6.23
+Course: CSD360
+styling for mod_10.html
+*/
+h2 {
+    color: #fff;
+    text-shadow:
+    -2px -2px 10px #181818,  
+    2px -2px 10px #181818,
+    -2px 2px 10px #181818,
+    2px 2px 10px #181818;
+    font-size: 800%;
+    font-weight: 400;
+    z-index: 1;
+}
+.para-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse 50% 50% at center, #2b2a2a, #181717);
+}
+.game-container{
+    position: relative;
+    height: 90vh;
+    background: #181717;
+}
+.para-container img {
+    position: absolute;
+    width: 65%;
+}
+@media only screen and (max-width: 1400px) {
+    .para-container {
+      height: 80vh;
+    }
+    .para-container img {
+        width: 100%;
+        height: auto;
+      }
+}
+@media only screen and (max-width: 1090px) {
+    h2 {
+        font-size: 600%;
+    }
+    .para-container {
+      height: 70vh;
+    }
+    .para-container img {
+      width: 100%;
+      height: auto;
+    }
+}
+  
+@media only screen and (max-width: 740px) {
+    h2 {
+        font-size: 300%;
+    }
+    .para-container {
+      height: 50vh;
+    }
+    .para-container img {
+      width: 100%;
+    }
+    .game-container {
+      height: 80vh;
+    }
+}
+@media only screen and (max-width: 560px) {
+    h2 {
+        font-size: 200%;
+    }
+    .para-container {
+      height: 30vh;
+    }
+    .para-container img {
+      width: 100%;
+    }
+    .game-container {
+      height: 80vh;
+    }
+}
+.select-box, .playboard, .results {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.select-box {
+    background-color: #fff;
+    padding: 40px 40px 40px 40px;
+    border-radius: 5px;
+    width: 40%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    transition: all 0.3s ease;
+}
+
+.select-box.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px; /* add */
+}
+.options button {
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    background: #23cc1d;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.options button:hover,
+.results button:hover {
+    transform: scale(0.9);
+}
+
+.playerX {
+    margin-right: 25px;
+}
+.selection {
+    font-size: 40px;
+    padding: 30px;
+    text-align: center;
+}
+.title{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #9b9797;
+}
+@media only screen and (max-width: 1350px) {
+    .select-box, .playboard, .results {
+        top: 25%;
+    }
+    .select-box {
+        width: 50%;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .selection {
+        font-size: 20px;
+    }
+    .options button {
+        width: 150px;
+        font-size:  15px;
+    }
+}
+@media only screen and (max-width: 860px) {
+    .select-box, .playboard, .results {
+        top: 20%;
+    }
+    .select-box {
+        width: 50%;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .selection {
+        font-size: 20px;
+    }
+    .options button {
+        width: 130px;
+        font-size:  15px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .select-box, .playboard, .results {
+        top: 25%;
+    }
+    .select-box {
+        width: 70%;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .selection {
+        font-size: 14px;
+    }
+    .options button {
+        width: 80px;
+        font-size:  11px;
+    }
+}
+.playboard {
+    margin-top: 100px;
+    text-align: center;
+    width: 490px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.playboard.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.5s ease;
+}
+.details {
+    font-size: 40px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.playboard section {
+    display: flex;
+}
+.playboard section span {
+    display: block;
+    margin: 5px;
+    height: 150px;
+    width: 160px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 90px;
+    text-align: center;
+    line-height: 150px;
+}
+.playboard .details .players{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    color:#23cc1d;
+}
+.details .slider {
+    position: absolute;
+    background: #23cc1d;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    z-index: 2;
+    transition: all .5s ease;
+}
+.players.active span:first-child {
+    color:#23cc1d;
+}
+.players.active span:nth-child(2) {
+    color:#fff;
+}
+.players.active .slider {
+    left: 50%;
+}
+.playboard .details span {
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 0;
+    position: relative;
+    z-index: 5;
+    transition: all .5s ease;
+}
+.details span:first-child{
+    color: #fff;
+}
+@media only screen and (max-width: 970px) {
+    .playboard {
+        top: 25%;
+        width: 450px;
+    }
+    .playboard section span {
+        height: 130px;
+        width: 140px;
+        line-height: 130px;
+        font-size: 90px;
+    }
+    .details {
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .playboard {
+        top: 25%;
+        width: 380px;
+        padding: 10px;
+    }
+    .playboard section span {
+        height: 110px;
+        width: 120px;
+        line-height: 110px;
+        font-size: 70px;
+    }
+    .details {
+        font-size: 20px;
+        padding: 10px
+    }
+}
+@media only screen and (max-width: 500px) {
+    .playboard {
+        top: 25%;
+        width: 320px;
+        padding: 10px;
+    }
+    .playboard section span {
+        height: 95px;
+        width: 100px;
+        line-height: 95px;
+        font-size: 60px;
+    }
+    .details {
+        font-size: 16px;
+        padding: 8px
+    }
+}
+
+.results {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.results.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.5s ease;
+}
+.results .win-text {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+
+}
+.results .win-text p {
+    margin: 0 20px;
+}
+.results button {
+    width: 30%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.results .btn {
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    background: #23cc1d;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1200px) {
+    .results {
+        width: 40%;
+    }
+    .results .win-text {
+        font-size: 50px;
+    }
+    .results .btn {
+        width: 150px;
+        font-size: 18px;
+    }
+    
+}
+@media only screen and (max-width: 850px) {
+    .results {
+        width: 50%;
+    }
+    .results .win-text {
+        font-size: 30px;
+    }
+    .results .btn {
+        width: 100px;
+        font-size: 16px;
+    }
+    
+}
+@media only screen and (max-width: 550px) {
+    .results {
+        width: 60%;
+    }
+    .results .win-text {
+        font-size: 20px;
+    }
+    .results .btn {
+        width: 100px;
+        font-size: 12px;
+    }
+}
+.x {
+    color:#23cc1d;
+}
+.o {
+    color:#181717;
+}
+

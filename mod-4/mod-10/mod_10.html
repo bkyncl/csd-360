@@ -1,0 +1,95 @@
+<!--
+mod_10.html
+Module 10 Assignment 
+Name: Brittany Kyncl
+Date: 5.6.23
+Course: CSD360
+Using JS DOM manipulation to change the display of a web page based on user interactions
+This page displays a parallax effect based on mouse movement and scrolling
+It also has an interactive tic tac toe game which updates and changes based on user events
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 10 Assignment web page">
+    <meta name="author" content="Brittany Kyncl">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="../site.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Module 10 Assignment</title>
+</head>
+<body>
+    <header id="top">
+        <h1>CSD 360 - JS Interactive Styling</h1>
+    </header>
+    <div class="nav">
+        <a href="../index.html">Landing Page</a>
+        <a href="../mod-9/mod_9.html">Previous</a>
+        <a href="../mod-11/mod_11.html">Next</a>
+    </div>
+    <div class="outer-container">
+        <div class="para-container">
+            <h2 class="object" data-value="3">TIC TAC TOE</h2>
+            <img src="img/1.png" class="object" data-value="-5" alt="shape">
+            <img src="img/2.png" class="object" data-value="2" alt="shape">
+            <img src="img/3.png" class="object" data-value="-2" alt="shape">
+            <img src="img/4.png" class="object" data-value="6" alt="shape">
+            <img src="img/5.png" class="object" data-value="8" alt="shape">
+            <img src="img/6.png" class="object" data-value="-9" alt="shape">
+            <img src="img/7.png" class="object" data-value="4" alt="shape">
+            <img src="img/8.png" class="object" data-value="-4" alt="shape">
+            <img src="img/9.png" class="object" data-value="6" alt="shape">
+            <img src="img/10.png" class="object" data-value="-7" alt="shape">
+            <img src="img/11.png" class="object" data-value="6" alt="shape">
+            <img src="img/12.png" class="object" data-value="5" alt="shape">
+        </div>
+        <div class="game-container">
+            <div class="select-box">
+                <div class="title">Lets Play Tic Tac Toe</div>
+                <div class="selection">Want to be X's or O's?</div>
+                <div class="options">
+                    <button class="playerX">Player X</button>
+                    <button class="playerO">Player O</button>
+                </div>
+            </div>
+            <div class="playboard">
+                <div class="details">
+                    <div class="players">
+                        <span class="Xturn">X's Turn</span>
+                        <span class="Oturn">O's Turn</span>
+                        <div class="slider"></div>
+                    </div>
+                </div>
+                <section>
+                    <span class="box1"></span>
+                    <span class="box2"></span>
+                    <span class="box3"></span>
+                </section>
+                <section>
+                    <span class="box4"></span>
+                    <span class="box5"></span>
+                    <span class="box6"></span>
+                </section>
+                <section>
+                    <span class="box7"></span>
+                    <span class="box8"></span>
+                    <span class="box9"></span>
+                </section>
+            </div>
+            <div class="results">
+                <div class="win-text"></div>
+                <button class="btn">Replay</button>
+            </div>   
+        </div>
+    </div>     
+    <footer>
+        <p id="copy">&#169;2023 Kyncl</p>
+        <p id="link"><a href="#top">Back to Top</a></p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>
